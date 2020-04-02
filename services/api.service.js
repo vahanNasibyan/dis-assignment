@@ -1,6 +1,7 @@
 "use strict";
 
 const ApiGateway = require("moleculer-web");
+const AuthService = require("../__services/AuthService");
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
@@ -133,18 +134,16 @@ module.exports = {
 			// Read the token from header
 			const auth = req.headers["authorization"];
 
+			console.log(1231231);
 			if (auth && auth.startsWith("Bearer")) {
 				const token = auth.slice(7);
-
+				const user = await AuthService.authUser(token);
 				// Check the token. Tip: call a service which verify the token. E.g. `accounts.resolveToken`
-				if (token == "123456") {
-					// Returns the resolved user. It will be set to the `ctx.meta.user`
-					return { id: 1, name: "John Doe" };
-
-				} else {
-					// Invalid token
+				if (!user){
 					throw new ApiGateway.Errors.UnAuthorizedError(ApiGateway.Errors.ERR_INVALID_TOKEN);
 				}
+				// Invalid token
+				return user;
 
 			} else {
 				// No token. Throw an error or do nothing if anonymous access is allowed.

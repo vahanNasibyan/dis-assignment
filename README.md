@@ -1,32 +1,37 @@
-[![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
-
 # disqo-demo
-This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
 
-## Usage
-Start the project with `npm run dev` command. 
-After starting, open the http://localhost:3000/ URL in your browser. 
-On the welcome page you can test the generated services via API Gateway and check the nodes & services.
-
-In the terminal, try the following commands:
-- `nodes` - List all connected nodes.
-- `actions` - List all registered service actions.
-- `call user.hello` - Call the `user.hello` action.
-- `call user.welcome --name John` - Call the `user.welcome` action with the `name` parameter.
+> Next Gen e-Commerce solution prototype
 
 
 
-## Services
-- **api**: API Gateway services
-- **user**: Sample service with `hello` and `welcome` actions.
+#### System requirements. 
+
+1. Node >= 10
+2. Redis >=3
+3. Nats >= 2.1.4
+4. Postgres >= 9.6  
 
 
-## Useful links
 
-* Moleculer website: https://moleculer.services/
-* Moleculer Documentation: https://moleculer.services/docs/0.14/
+ ####   Optional system requirements. 
 
-## NPM scripts
+ 1. Docker
+ 2. Kubernetes/minikube
+ 3. Kubectl
+
+#### Clone 
+Clone this repo to your local machine using https://github.com/vahanNasibyan/dis-assignment.git
+
+
+#### Setup
+
+`cd dis-assignment && npm install`
+
+### Usage
+
+`npm run dev` or `npm start`
+
+#### NPM scripts
 
 - `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
 - `npm run start`: Start production mode (set `SERVICES` env variable to load certain services)
@@ -36,3 +41,29 @@ In the terminal, try the following commands:
 - `npm test`: Run tests & generate coverage report
 - `npm run dc:up`: Start the stack with Docker Compose
 - `npm run dc:down`: Stop the stack with Docker Compose
+
+#### References 
+
+1. [Roadmaps and KPI's](./docs/roadmaps_and_kpi's.md)
+2. [Architechture overview](./docs/architecture_overview.md)
+3. [Database UML diagram](./docs/assets/database.png) (NOTE: this is sample database diagram for simplicity)
+
+4. [Project technical overwiew](./docs/technical_specifications/README.md)
+5. [API microservice technical specification](./docs/technical_specifications/api-microservice.md)
+6. [Authentication microservice technical specification](./docs/technical_specifications/auth-microservice.md)
+7. [Deployment](./docs/deployments.md)
+
+
+#### Contributing
+
+Contribution guide TBD 
+
+#### FAQ
+
+FAQ section TBD
+
+#### LICENSE 
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
