@@ -52,7 +52,7 @@ Clone this repo to your local machine using https://github.com/vahanNasibyan/dis
 5. [API microservice technical specification](./docs/technical_specifications/api-microservice.md)
 6. [Authentication microservice technical specification](./docs/technical_specifications/auth-microservice.md)
 7. [Deployment](./docs/deployments.md)
-
+8. [API Documentation](https://documenter.getpostman.com/view/6358266/SzYaVdew?version=latest)
 
 #### Contributing
 
