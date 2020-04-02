@@ -62,3 +62,7 @@ typings/
 
 # JetBrains IDE
 .idea
+
+# vscode
+
+.vscode
